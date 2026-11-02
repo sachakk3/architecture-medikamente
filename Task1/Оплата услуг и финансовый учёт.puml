@@ -1,0 +1,54 @@
+@startuml
+title As-Is: Оплата услуг и финансовый учёт
+left to right direction
+skinparam shadowing false
+skinparam rectangle {
+    BackgroundColor White
+    BorderColor Black
+}
+
+actor "Пациент" as Patient
+actor "Кассир" as Cashier
+actor "Бухгалтер" as Bookkeeper
+component "ККМ" as KKM
+rectangle "Ручной учёт оплаты\n(дублирование)" as Process
+database "Excel-файл\nучёта платежей" as PaymentExcel
+component "1С:Бухгалтерия предприятия\n(файловый режим)" as Accounting
+component "1С:Торговля и склад\n(файловый режим)" as Trade
+
+Patient --> Cashier : Оплата медицинской услуги
+Cashier --> KKM : Принимает платёж;\nформирует кассовые данные
+Cashier --> Process : Вручную дублирует учёт\nв Excel и 1С
+Process --> PaymentExcel : Учётные сведения об оплате\n(точный состав полей нужно проверить)
+KKM --> Accounting : Данные о принятии оплаты\n(TCP/IP до сервера;\nOLE-компонента 1С)
+Bookkeeper --> Accounting : Обрабатывает платежи\nи ведёт бухгалтерский учёт
+Accounting <--> Trade : Интеграция между 1С\n(состав обмена не уточнён)
+
+note right of PaymentExcel
+  В исходном описании указано
+  дублирование платежей кассирами
+  в Excel и 1С. Сведения о платёжных
+  реквизитах/данных карты не приведены —
+  их наличие нельзя предполагать.
+end note
+
+note bottom of Accounting
+  To-Be меры:
+  • разделить финансовый и медицинский
+    домены; кассиру/бухгалтеру выдавать
+    только необходимые атрибуты;
+  • исключить ручное дублирование,
+    валидировать интеграционные сообщения;
+  • защитить каналы шифрованием после
+    проверки возможностей ККМ/1С;
+  • ограничить доступ к каталогам баз,
+    резервным копиям и носителям;
+  • аудитировать изменения и сверять
+    операции между ККМ, 1С и учётом.
+end note
+
+legend bottom
+Сплошные потоки — текущее состояние (As-Is).
+Блоки To-Be — рекомендации, не существующие функции.
+endlegend
+@enduml

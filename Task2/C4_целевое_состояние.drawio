@@ -1,0 +1,151 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram id="target-c4" name="Целевая архитектура">
+    <mxGraphModel dx="1410" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1160" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system" value="МЕДИКАМЕНТЕ [Целевая система]" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#17324D;strokeWidth=2;fontSize=18;fontStyle=1;align=left;verticalAlign=top;spacing=14;" parent="1" vertex="1">
+          <mxGeometry x="320" y="85" width="1260" height="945" as="geometry" />
+        </mxCell>
+        <mxCell id="channelsGroup" value="Пользовательские каналы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7FA;strokeColor=#B5C4D1;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="345" y="120" width="1210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="businessGroup" value="Предметные сервисы и интеграции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7FA;strokeColor=#B5C4D1;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="345" y="275" width="1210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="privacyGroup" value="Сквозной Privacy by Design слой — применяется ко всем предметным сервисам и потокам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#547A9C;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="345" y="510" width="1210" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="analyticsGroup" value="Изолированный аналитический контур" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EDF8;strokeColor=#8064A2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="345" y="705" width="1210" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="patient" value="Пациент&#xa;[Пользователь]" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#6C6477;strokeColor=#4D4D4D;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="125" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="staff" value="Сотрудники клиники&#xa;Ресепшен • врач •&#xa;кассир / бухгалтер" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#FFFFFF;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="350" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="analyst" value="Аналитик&#xa;данных" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="765" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="owner" value="Владелец данных /&#xa;ответственный за ПДн" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#FFFFFF;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="640" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="portal" value="Портал пациента&#xa;[Приложение]&#xa;Только собственные записи,&#xa;приёмы и результаты" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="385" y="155" width="250" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="workspace" value="Рабочее место сотрудника&#xa;[Приложение]&#xa;Интерфейс по роли и рабочей цели" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="715" y="155" width="280" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="scheduling" value="Регистрация&#xa;и расписание&#xa;[Сервис]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="375" y="325" width="205" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="clinical" value="Медицинская карта&#xa;и результаты анализов&#xa;[Сервис]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="610" y="325" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="billing" value="Финансовый учёт&#xa;и расчёты&#xa;[Сервис]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="860" y="325" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="integration" value="Шлюз интеграций&#xa;[Сервис]&#xa;Проверка схемы, источника&#xa;и системных полномочий" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="325" width="250" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="access" value="IAM + Policy Engine&#xa;RBAC/ABAC, MFA, цель&#xa;и контекст доступа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#547A9C;strokeColor=#345A7C;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="375" y="565" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="governance" value="Каталог данных и управление приватностью&#xa;Классификация и метки, цель, основание, сроки,&#xa;lineage и запросы субъекта" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#547A9C;strokeColor=#345A7C;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="655" y="555" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-key-management" value="Управление ключами&#xa;и криптографией&#xa;Ключи отдельно от данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#547A9C;strokeColor=#345A7C;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1025" y="565" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" value="Аудит и мониторинг&#xa;Доступ, изменения, экспорт, оповещения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#547A9C;strokeColor=#345A7C;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1275" y="565" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="intake" value="Приём наборов из доменов&#xa;записи, медицины и финансов&#xa;Allowlist + policy check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8064A2;strokeColor=#654B83;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="380" y="770" width="215" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="transform" value="Privacy-трансформации&#xa;Удаление идентификаторов,&#xa;обезличивание, агрегация" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8064A2;strokeColor=#654B83;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="770" width="240" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="store" value="Аналитическое хранилище&#xa;Только одобренные производные наборы" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#8064A2;strokeColor=#654B83;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="895" y="770" width="230" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="tools" value="BI / ML / AI&#xa;Экспорт по утверждённым правилам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8064A2;strokeColor=#654B83;fontColor=#FFFFFF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1155" y="770" width="240" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="laboratory" value="Медицинская&#xa;лаборатория&#xa;[Внешняя система]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="305" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="kkm" value="ККМ&#xa;[Переходный контур]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="420" width="210" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="legacy" value="1С:Бухгалтерия и&#xa;1С:Торговля и склад&#xa;[Переходный контур]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#FFFFFF;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="535" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="Собственные данные" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="patient" target="portal" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="staff" target="workspace" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Наборы" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="analyst" target="tools" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Политики" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="owner" target="governance" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="portal" target="scheduling" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="portal" target="clinical" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="workspace" target="scheduling" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="workspace" target="clinical" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="workspace" target="billing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="" style="endArrow=block;startArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="billing" target="integration" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="Анализы" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="laboratory" target="integration" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="Касса" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="kkm" target="integration" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="integration" target="clinical" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;" parent="1" source="integration" target="billing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="Переходный обмен" style="endArrow=block;html=1;rounded=0;strokeColor=#606060;fontSize=10;" parent="1" source="integration" target="legacy" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#8064A2;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595" y="809.71" as="sourcePoint" />
+            <mxPoint x="625" y="809.71" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#8064A2;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="865" y="809.71" as="sourcePoint" />
+            <mxPoint x="895" y="809.71" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#8064A2;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1125" y="812.21" as="sourcePoint" />
+            <mxPoint x="1155" y="812.21" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
